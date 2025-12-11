@@ -5,3 +5,4 @@ out/
 .DS_Store
 *apikey*
 *config.json
+api-key.txt
