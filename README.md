@@ -21,7 +21,7 @@ Sistema de consulta meteorológica via terminal desenvolvido em Java, consumindo
 
 ## 📋 Pré-requisitos
 
-- Java 11 ou superior
+- Java 17 ou superior (testado com Java 22)
 - Biblioteca JSON (`org.json`)
 - Chave de API da [WeatherAPI](https://www.weatherapi.com/)
 
