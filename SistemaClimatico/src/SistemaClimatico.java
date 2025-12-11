@@ -6,6 +6,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class SistemaClimatico {
@@ -16,7 +17,7 @@ public class SistemaClimatico {
         String cidade = sc.nextLine(); // Lê a cidade do teclado.
 
         try {
-            String dadosClimaticos = get.DadosClimaticos(cidade); //Retorna um JSON
+            String dadosClimaticos = getDadosClimaticos(cidade); //Retorna um JSON
 
             // Código 1006 significa localização não é encontrada.
             if (dadosClimaticos.contains("\"code\":1006")) { // \"code":1006 representa "code":1006.
@@ -31,7 +32,7 @@ public class SistemaClimatico {
     }
 
     public static String getDadosClimaticos(String cidade) throws Exception {
-        String apiKey = Files.readString(Paths.get("api-key.txt")).trim();
+        String apiKey = Files.readString( Paths.get("api-key.txt")).trim();
 
         String formataNomeCidade = URLEncoder.encode(cidade, StandardCharsets.UTF_8);
         String apiUrl = "http://api.weatherapi.com/v1/current.json?key=" + apiKey +"&q=" + formataNomeCidade;
@@ -40,17 +41,17 @@ public class SistemaClimatico {
                 .build();// Finaliza a construção da solicitação HTTP.
 
         //Criar objeto enviar solicitações HTTP e recever respotas HTTP, para acessar o site da WeatherAPI.
-        HttpClient client = new HttpClient.newHttpClient();
+        HttpClient client = HttpClient.newHttpClient();
 
         // Agora vamos enviar requisições HTTP e receber resposta HTTP, comunicar com o site da API metereológica.
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        return responde.body(); // Retorna os dados metereológicos obtidos no site da API (WheaterAPI).
+        return response.body(); // Retorna os dados metereológicos obtidos no site da API (WheaterAPI).
     }
 
     // Método para Imprimir os dados metereológicos de forma organizada.
     public static void imprimirDadosClimaticos(String dados) {
-        // System.out.println("Dados originais (JSON) obtidos no site metereológico" + dados);
+        // System.out.println("Dados originais (JSON) obtidos no site metereológico: " + dados);
 
         JSONObject dadosJson = new JSONObject(dados);
         JSONObject informacoesMetereologicas = dadosJson.getJSONObject("current");
@@ -68,13 +69,13 @@ public class SistemaClimatico {
         float temperaturaAtual = informacoesMetereologicas.getFloat("temp_c");
 
         //Extrai a data e a hora da string retornada pela API;
-        String daHoraString = informacoesMetereologicas.getString("last_update");
+        String daHoraString = informacoesMetereologicas.getString("last_updated");
 
         // Imprime as informações atuais.
         System.out.println("Informações Metereológicas para " + cidade + ", " + pais);
         System.out.println("Data e Hora: " + daHoraString);
         System.out.println("Temperatura atual: " + temperaturaAtual + "ºC");
-        System.out.println("Senscação Térmica: " + sensacaoTermica = "ºC");
+        System.out.println("Sensação Térmica: " + sensacaoTermica + "ºC");
         System.out.println("Condição do Tempo: " + condicaoTempo);
         System.out.println("Umidade: " +umidade + "%");
         System.out.println("Velocidade do Vento: " + velocidadeVEnto + "km/h");
