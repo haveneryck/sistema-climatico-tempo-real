@@ -14,14 +14,14 @@ Sistema de consulta meteorológica via terminal desenvolvido em Java, consumindo
 ## 🛠️ Tecnologias
 
 - **Java** - Linguagem principal
-- **HTTP Client** - Requisições HTTP nativas do Java 11+
+- **HTTP Client** - Requisições HTTP nativas do Java 17+ (testado com Java 22)
 - **JSON (org.json)** - Parsing de dados da API
 - **WeatherAPI** - API meteorológica externa
 - **URLEncoder** - Codificação de URLs
 
 ## 📋 Pré-requisitos
 
-- Java 11 ou superior
+- Java 17 ou superior (testado com Java 22)
 - Biblioteca JSON (`org.json`)
 - Chave de API da [WeatherAPI](https://www.weatherapi.com/)
 
