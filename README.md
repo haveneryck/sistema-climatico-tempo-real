@@ -5,13 +5,13 @@ Sistema de consulta meteorológica via terminal desenvolvido em Java, consumindo
 ## 🖼️ Screenshots
 
 ### Interface Inicial
-![Interface esperando entrada](screenshots/Interface vazia.png)
+![vazia](screenshots/interface-vazia.png)
 
-### Consulta - Montes Claros, MG
-![Dados meteorológicos de Montes Claros](screenshot-montes-claros.png)
+### Montes Claros
+![montes](screenshots/screenshot-montes-claros.png)
 
-### Consulta - São Paulo, SP
-![Dados meteorológicos de São Paulo](screenshot-sao-paulo.png)
+### São Paulo
+![saopaulo](screenshots/screenshot-sao-paulo.png)
 
 ## 🎯 Funcionalidades
 
