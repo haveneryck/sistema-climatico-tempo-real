@@ -2,6 +2,17 @@
 
 Sistema de consulta meteorológica via terminal desenvolvido em Java, consumindo a API WeatherAPI para obter dados climáticos atualizados de qualquer cidade do mundo.
 
+## 🖼️ Screenshots
+
+### Interface Inicial
+![Interface esperando entrada](screenshots/interface-vazia.png)
+
+### Consulta - Montes Claros, MG
+![Dados meteorológicos de Montes Claros](screenshots/screenshot-montes-claros.png)
+
+### Consulta - São Paulo, SP
+![Dados meteorológicos de São Paulo](screenshots/screenshot-sao-paulo.png)
+
 ## 🎯 Funcionalidades
 
 - ✅ Consulta de dados meteorológicos em tempo real
