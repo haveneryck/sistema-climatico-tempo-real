@@ -5,7 +5,7 @@ Sistema de consulta meteorológica via terminal desenvolvido em Java, consumindo
 ## 🖼️ Screenshots
 
 ### Interface Inicial
-![Interface esperando entrada](screenshots/interface-vazia.png)
+![Interface esperando entrada](screenshots/Interface vazia.png)
 
 ### Consulta - Montes Claros, MG
 ![Dados meteorológicos de Montes Claros](screenshots/screenshot-montes-claros.png)
