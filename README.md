@@ -5,7 +5,7 @@ Sistema de consulta meteorológica via terminal desenvolvido em Java, consumindo
 ## 🖼️ Screenshots
 
 ### Interface Inicial
-![vazia](screenshots/interface-vazia.png)
+![vazia](screenshots/Interface%20vazia.png)
 
 ### Montes Claros
 ![montes](screenshots/screenshot-montes-claros.png)
